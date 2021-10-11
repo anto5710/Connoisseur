@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+
+<he>
+    <meta charset="UTF-8" />
+    <title>Eddie's Connoisseur</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <!-- <link rel="stylesheet" href="style.css" /> -->
+    <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans&display=swap" rel="stylesheet">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    </head>
+
+
+    <p id="dc">The Ultimate Tufts Survival Guide</p>
+
+    <body>
+        <script>
+            fetchi();
+
+            async function fetchi() {
+
+                var url = 'https://menus.tufts.edu/FoodPro%203.1.NET/shortmenu.aspx?sName=TUFTS+DINING&locationNum=11&locationName=Dewick-MacPhie+Dining+Center&naFlag=1';
+
+
+                // let request = new XMLHttpRequest();
+                // request.open('GET', url);
+                // request.responseType = 'text';
+
+                // request.onload = function () {
+                //     poemDisplay.textContent = request.response;
+                // };
+
+                // request.send();
+
+                console.log("request sent");
+                
+                let response = await fetch(url, {
+                    method: 'GET',
+                    headers: {
+                        'Accept': 'application/json',
+                        'Content-type': 'application/json'
+                    },
+                    credentials: 'include',
+                    
+                });
+                let result = await response.json();
+                
+                console.log(result);
+                
+            }
+        </script>
+
+    </body>
+
+</html>
+</body>
+
+</html>
