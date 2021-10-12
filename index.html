@@ -2,58 +2,90 @@
 <html>
 
 <he>
-    <meta charset="UTF-8" />
-    <title>Eddie's Connoisseur</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-    <!-- <link rel="stylesheet" href="style.css" /> -->
-    <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans&display=swap" rel="stylesheet">
+	<meta charset="UTF-8" />
+	<title>Eddie's Connoisseur</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<meta http-equiv="X-UA-Compatible" content="ie=edge" />
+	<!-- <link rel="stylesheet" href="style.css" /> -->
+	<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans&display=swap" rel="stylesheet">
 
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-    </head>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 
-    <p id="dc">The Ultimate Tufts Survival Guide</p>
-
-    <body>
-        <script>
-            fetchi();
-
-            async function fetchi() {
-
-                var url = 'https://menus.tufts.edu/FoodPro%203.1.NET/shortmenu.aspx?sName=TUFTS+DINING&locationNum=11&locationName=Dewick-MacPhie+Dining+Center&naFlag=1';
+	</head>
 
 
-                // let request = new XMLHttpRequest();
-                // request.open('GET', url);
-                // request.responseType = 'text';
+	<p id="dc" style="text-align: center; 
+					font-size: 15em; 
+					  color: white; 
+					  background-color:#3E7EDE; 
+					  margin: auto;">
 
-                // request.onload = function () {
-                //     poemDisplay.textContent = request.response;
-                // };
+		<b>Eddy</b>
+		<br>
+	</p>
 
-                // request.send();
+	<body>
 
-                console.log("request sent");
-                
-                let response = await fetch(url, {
-                    method: 'GET',
-                    headers: {
-                        'Accept': 'application/json',
-                        'Content-type': 'application/json'
-                    },
-                    credentials: 'include',
-                    
-                });
-                let result = await response.json();
-                
-                console.log(result);
-                
-            }
-        </script>
 
-    </body>
+
+		<script type="text/javascript" src="jquery-3.6.0.js">
+		</script>
+		<script>
+			cc();
+			function cc() {
+				document.getElementById("dc").style.backgroundColor = "#"+
+				Math.floor(Math.random()*16777215).toString(16);
+
+				setTimeout(function(){cc()}, 100);
+			}
+			// var i = 0;
+			// while (true) {
+			// console.log("EEE");
+
+			// }
+
+			// fetchi();
+
+			// async function fetchi() {
+
+			// var url = 'https://menus.tufts.edu/FoodPro%203.1.NET/shortmenu.aspx?sName=TUFTS+DINING&locationNum=11&locationName=Dewick-MacPhie+Dining+Center&naFlag=1';
+			// 	// document.fi
+			// console.log("From");
+			// $.get(url+"&callback=?", function(){
+			// 	$(".result").html(data);
+			// 	console.log("DOOOOO!");
+			// 	alert("Load was performed.");
+			// });
+			// 	// let request = new XMLHttpRequest();
+			// 	// request.open('GET', url);
+			// 	// request.responseType = 'text';
+
+			// 	// request.onload = function () {
+			// 	//     poemDisplay.textContent = request.response;
+			// 	// };
+
+			// 	// request.send();
+
+			// 	console.log("request sent");
+
+			// 	let response = await fetch(url, {
+			// 		method: 'GET',
+			// 		headers: {
+			// 			'Accept': 'application/json',
+			// 			'Content-type': 'application/json'
+			// 		},
+			// 		credentials: 'include',
+
+			// 	});
+			// 	let result = await response.json();
+
+			// 	console.log(result);
+
+
+		</script>
+
+	</body>
 
 </html>
 </body>
